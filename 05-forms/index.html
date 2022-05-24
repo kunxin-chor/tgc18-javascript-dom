@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Sign up for a Heavily Guided Tour of Japan</h1>
+    <!-- the <form> tag inform the browser that we are creating a form-->
+    <form>
+        <h3>Personal Particulars</h3>
+        <div>
+        <label>First Name:</label>
+        <input type="text"/>
+    </div>
+    <div>
+        <label>Last Name:</label>
+        <input type="text"/>
+    </div>
+    <div>
+        <label>Tell us why you want to visit Japan so badly</label>
+        <textarea></textarea>
+    </div>
+    <div>
+        <label>Your age group</label>
+        <input type="radio" name="age-group" value="young"/><label>Less than 21 years old</label>
+        <!-- set the adult radio button to be checked by default-->
+        <input type="radio" name="age-group" value="adult" checked/><label>From 21 to 40 years old</label>
+        <input type="radio" name="age-group" value="elderly"/><label>41 and above</label>
+    </div>
+    <div>
+        <label>What are you going to do in Japan?</label>
+        <input type="checkbox" name="iternary" value="eat-raw-fish"/><label>Eat raw fishes</label>
+        <input type="checkbox" name="iternary" value="sightseeing"/><label>Sight seeing</label>
+        <input type="checkbox" name="iternary" value="hot-spring"/><label>Hot Springs</label>
+    </div> 
+    <div>
+        <label>When do you intend to go to Japan?</label>
+        <input type="date"/>
+    </div>
+    <div>
+        <label>How many people do you want to go with?</label>
+        <input type="number"/>
+    </div>
+    <h3>Extra Information</h3>
+    <div>
+        <!-- select dropdown -->
+        <label>Which country are you from?</label>
+        <select name="country">
+            <option value="singapore">Singapore</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="indonesia">Indonesia</option>
+        </select>
+    </div>
+    <div>
+        <!-- multiselect -->
+        <label>What other countries have you been to?</label>
+        <select name="other-countries" multiple>
+            <option value="india">India</option>
+            <option value="china">China</option>
+            <option value="france">France</option>
+            <option value="united-kingdoms">United Kingdoms</option>
+        </select>
+    </div>
+
+    <button>Generic button</button>
+    <input type="submit"/>
+    </form>   
+</body>
+</html>
