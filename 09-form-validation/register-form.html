@@ -5,30 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #errors {
+            background-color: pink;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 20px;
+        }
+
+        #errors li {
+            margin-left:1em;
+        }
+
+        .row {
+            padding: 0.2em;
+            margin: 0.2em;
+        }
+
+        div.error {
+            color: red;
+        }
+
+    </style>
 </head>
 <body>
     <div>
+        <ul id="errors" style="display:none"></ul>
         <h1>Register an Account</h1>
-        <div>
-            <label for="txtUserName>User Name:</label>
+        <div class="row">
+            <label for="txtUserName">User Name:</label>
             <input type="text" id="txtUserName" placeholder="Enter your user name"/>
+            <div class="error" id="txtUserNameError"></div>
         </div>
 
-        <div>
-            <label>Email:</label>
+        <div class="row">
+            <label for="txtEmail">Email</label>:
             <input type="text" id="txtEmail" placeholder="Enter your email address"/>
+            <div class="error" id="txtEmailError"></div>
         </div>
 
-        <div>
+        <div class="row">
             <label>Password:</label>
             <input type="password" id="txtPassword" placeholder="Enter your password"/>
+            <div class="error" id="txtPasswordError"></div>
+        </div>
+        <div class="row">
+            <input type="checkbox" value="agree" id="agree"/>
+            <label for="agree">I agree to the terms and permission</label>
+            <div class="error" id="txtConditonError"></div>
         </div>
 
-        <input type="checkbox" value="agree" id="agree"/>
-        <label>I agree to the terms and permission</label>
-
-        <button>Submit</button>
+        <button id="btnSubmit">Submit</button>
 
     </div>
+    <script src="form-validation.js"></script>
 </body>
 </html>
