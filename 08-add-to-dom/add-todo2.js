@@ -9,7 +9,6 @@ document.querySelector('#btnAdd')
             bgColor = 'red';
         }
 
-
         // create the new <li> element
         let newListElement = document.createElement('li');
         newListElement.innerHTML = newTodo;
