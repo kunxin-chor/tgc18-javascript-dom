@@ -1,6 +1,6 @@
-let services = [
+[
     {
-        name:"Free flow drinks",
+        "name":"Free flow drinks",
         "cost": 2.50,
         "value": "free-flow-drinks"
     },
@@ -23,17 +23,10 @@ let services = [
         "name":"Perform the hand-made noodle dance",
         "cost": 7.50,
         "value":"make-noodle"
+    },
+    {
+        "name":"Wet towels",
+        "cost": 0.50,
+        "value":"wet-towels"
     }
 ]
-
-for (let eachService of services) {
-    let html = `
-            <div>
-                <input type="checkbox" class="form-check-input services"
-                       value="${eachService.value}"/>
-                <label>${eachService.name} ($${eachService.cost})</label>
-            </div>
-    `;
-
-    document.querySelector('#services').innerHTML += html;
-}
