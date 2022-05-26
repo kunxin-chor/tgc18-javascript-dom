@@ -29,8 +29,10 @@ let services = [
     }
 ]
 
+// use the html variable to buffer all the new elements
+let html = "";
 for (let eachService of services) {
-    let html = `
+    html += `
             <div>
                 <input type="checkbox" class="form-check-input services"
                        value="${eachService.value}"
@@ -39,10 +41,11 @@ for (let eachService of services) {
             </div>
     `;
 
-    // whenever the innerHTML changes, the elements are recreated
-    document.querySelector('#services').innerHTML += html;
-
 }
+// whenever the innerHTML changes, the elements are recreated
+// create all the new elements in one shot
+document.querySelector('#services').innerHTML += html;
+
 let servicesDiv = document.querySelector('#services');
 let allCheckboxes = servicesDiv.querySelectorAll('.services');
 for (let eachCheckbox of allCheckboxes) {
